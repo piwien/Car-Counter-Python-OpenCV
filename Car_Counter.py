@@ -5,7 +5,9 @@ import math
 from sort import *
 import numpy as np
 
+# Car video
 carvideo = cv2.VideoCapture("car_adana.mp4")
+# Yolo Model
 model = YOLO("Yolo-Weights/yolov8l.pt")
 
 classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train",
@@ -21,6 +23,7 @@ classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "trai
               "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors",
               "teddy bear", "hair drier", "toothbrush"]
 
+# Mask for carvideo. If you use a different car video make your mask and change it.
 mask = cv2.imread("mask_v2.jpg")
 
 # Tracking
